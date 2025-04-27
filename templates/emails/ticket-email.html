@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    .ticket {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ticket">
+    <h2>🎫 Your Ticket for {{ event.title }}</h2>
+    <p>Hi {{ user.username }},</p>
+
+    <p>
+      Thank you for booking your ticket for <strong>{{ event.title }}</strong><br>
+      📍 Location: {{ event.location }}<br>
+      📅 Date: {{ event.start_date|date:"D, M j, Y H:i A" }}
+    </p>
+
+    <p>Your QR code is attached to this email. Please present it at the venue.</p>
+
+    <p style="margin-top: 20px;">Enjoy the event!<br>— The Event App Team</p>
+  </div>
+</body>
+</html>
